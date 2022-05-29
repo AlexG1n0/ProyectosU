@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --boton-azul: #14068f;
+            --text-input-field: #F7F7F7;
+            --dark: #232830;
+            --sm: 12px;
+            --md: 14px;
+            --lg: 16px;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 24px;
+            border-bottom: 1px solid var(--hospital-green);
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .navbar-left ul,
+        .navbar-right ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            height: 30px;
+        }
+
+        .navbar-left {
+            display: flex;
+        }
+
+        .navbar-left ul {
+            margin-left: 12px;
+        }
+
+        .navbar-left ul li a,
+        .navbar-right ul li a {
+            text-decoration: none;
+            border-radius: 7px;
+            padding: 4px;
+            color: var(--very-light-pink);
+            border: 1px solid var(--white);
+        }
+
+        .navbar-left ul li a:hover,
+        .navbar-right ul li a:hover {
+            color: var(--hospital-green);
+            border: 1px solid var(--hospital-green);
+        }
+
+        .navbar-email {
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            margin-right: 10px;
+        }
+
+        .navbar-image-cart {
+            position: relative;
+        }
+
+        .navbar-image-cart div {
+            width: 10px;
+            height: 10px;
+            background-color: var(--hospital-green);
+            border-radius: 50%;
+            font-size: var(--sm);
+            font-weight: bold;
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div.gallery {
+            margin: 5px;
+            border: 1px solid #ccc;
+        }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .primary-button {
+            background-color: var(--boton-azul);
+            border: 1px solid var(--boton-azul);
+            color: var(--white);
+            border-radius: 18px;
+            font-size: var(--md);
+            padding: 5px;
+            height: 30px;
+            font-weight: bold;
+            width: 50%;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #083dcc;
+            color: white;
+        }
+
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(30, 114, 86, 0.836);
+            color: white;
+            text-align: center;
+        }
+
+        @media(max-width:640px) {
+            .menu {
+                display: block;
+            }
+
+            .navbar-left ul {
+                display: none;
+            }
+
+            .navbar-email {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+        <div class="navbar-left">
+            <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+            <ul>
+                <li>
+                    <a href="#">Inicio</a>
+                </li>
+                <li>
+                    <a href="#">Productos</a>
+                </li>
+                <li>
+                    <a href="#">Ofertas</a>
+                </li>
+                <li>
+                    <a href="#">Servicios</a>
+                </li>
+                <li>
+                    <a href="#">Contactenos</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <ul>
+                <li class="navbar-email">alexgino@gmail.com</li>
+                <li class="navbar-image-cart">
+                    <img src="./icons/icon_shopping_cart.svg" alt="cart">
+                    <div>5</div>
+                </li>
+                <a href="/" class="navbar-email">Cerrar</a>
+                <li></li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <br>
+        <h2 align="center">OFERTAS POR CIERRE DE MES</h2>
+
+        <h4>Seleccione los articulos que mas les guste</h4>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank">
+                    <img src="https://coolboxpe.vtexassets.com/arquivos/ids/211958-800-auto?v=637880543122570000&width=800&height=auto&aspect=true"
+                        alt="Cinque Terre" width="600" height="600">
+                </a>
+                <div class="desc">Promoción 01</div>
+                <div class="desc">
+                    <input type="submit" value="Comprar" class="primary-button button">
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank">
+                    <img src="https://coolboxpe.vtexassets.com/arquivos/ids/208543-800-auto?v=637840804463300000&width=800&height=auto&aspect=true"
+                        alt="Forest" width="600" height="400">
+                </a>
+                <div class="desc">Promoción 02</div>
+                <div class="desc">
+                    <input type="submit" value="Comprar" class="primary-button button">
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank">
+                    <img src="https://coolboxpe.vtexassets.com/arquivos/ids/193990-800-auto?v=637722444579130000&width=800&height=auto&aspect=true"
+                        alt="Northern Lights" width="600" height="400">
+                </a>
+                <div class="desc">Promoción 03</div>
+                <div class="desc">
+                    <input type="submit" value="Comprar" class="primary-button button">
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank">
+                    <img src="https://coolboxpe.vtexassets.com/arquivos/ids/193401-800-auto?v=637710406860300000&width=800&height=auto&aspect=true"
+                        alt="Mountains" width="600" height="400">
+                </a>
+                <div class="desc">Promoción 04</div>
+                <div class="desc">
+                    <input type="submit" value="Comprar" class="primary-button button">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank">
+                    <img src="https://coolboxpe.vtexassets.com/arquivos/ids/208543-800-auto?v=637840804463300000&width=800&height=auto&aspect=true"
+                        alt="Forest" width="600" height="400">
+                </a>
+                <div class="desc">Promoción 05</div>
+                <div class="desc">
+                    <input type="submit" value="Comprar" class="primary-button button">
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank">
+                    <img src="https://coolboxpe.vtexassets.com/arquivos/ids/193990-800-auto?v=637722444579130000&width=800&height=auto&aspect=true"
+                        alt="Northern Lights" width="600" height="400">
+                </a>
+                <div class="desc">Promoción 06</div>
+                <div class="desc">
+                    <input type="submit" value="Comprar" class="primary-button button">
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank">
+                    <img src="https://coolboxpe.vtexassets.com/arquivos/ids/193401-800-auto?v=637710406860300000&width=800&height=auto&aspect=true"
+                        alt="Mountains" width="600" height="400">
+                </a>
+                <div class="desc">Promoción 07</div>
+                <div class="desc">
+                    <input type="submit" value="Comprar" class="primary-button button">
+                </div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank">
+                    <img src="https://coolboxpe.vtexassets.com/arquivos/ids/211958-800-auto?v=637880543122570000&width=800&height=auto&aspect=true"
+                        alt="Cinque Terre" width="600" height="600">
+                </a>
+                <div class="desc">Promoción 08</div>
+                <div class="desc">
+                    <input type="submit" value="Comprar" class="primary-button button">
+                </div>
+            </div>
+        </div>
+        <br>
+    </section>
+    <footer>
+        <div class="footer">
+            <p>Desarrollada por Alex Solano - 2022</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
